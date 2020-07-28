@@ -1,0 +1,15 @@
+use social_media;
+ALTER TABLE friends DROP FOREIGN KEY Friend_ID_fk;
+ALTER TABLE friends DROP FOREIGN KEY User_ID_fk;
+ALTER TABLE page_likes DROP FOREIGN KEY Page_ID_fk;
+ALTER TABLE page_likes DROP FOREIGN KEY Page_User_ID_fk;
+ALTER TABLE posts DROP FOREIGN KEY Post_User_fk;
+ALTER TABLE post_likes DROP FOREIGN KEY Liked_Post_ID_fk;
+ALTER TABLE post_likes DROP FOREIGN KEY Liked_User_ID_fk;
+ALTER TABLE post_shares DROP FOREIGN KEY Shared_Post_ID_fk;
+ALTER TABLE post_shares DROP FOREIGN KEY Shared_User_ID_fk;
+ALTER TABLE post_comments DROP FOREIGN KEY Commented_Post_ID_fk;
+ALTER TABLE post_comments DROP FOREIGN KEY Commented_User_ID_fk;
+ALTER TABLE comments_like DROP FOREIGN KEY Comment_ID_fk;
+ALTER TABLE comments_like DROP FOREIGN KEY Comment_liked_user_ID_fk;
+SET GLOBAL log_bin_trust_function_creators = 1;
